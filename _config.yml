@@ -1,3 +1,11 @@
 theme: jekyll-theme-slate
+
+# Site settings
 title: Simple
 description: "大道至简"
+
+# Sidebar settings
+#sidebar: true                            #添加侧边栏
+#sidebar-about-description: "退役acmer，现为西安电子科技大学研究生，主要研究物联网安全。"
+#sidebar-avatar: /img/avatar-Jack.jpg     #你的大头贴，请使用绝对地址.
+
