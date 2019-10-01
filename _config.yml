@@ -3,7 +3,7 @@ title: Simple
 SEOTitle: qry的博客 | Simple
 header-img: img/home-bg.jpg
 email: qry0522@qq.com
-description: ""
+description: "simple的个人博客，主要记录研究生阶段读过的文章和做的一些总结"
 keyword: ""
 url: "https://simpleqin.github.io"              # your host, for absolute URL
 baseurl: ""         # for example, '/blog' if your blog hosted on 'host/blog'
@@ -38,6 +38,17 @@ kramdown:
 
 # Disqus settings
 #disqus_username: _your_disqus_short_name_
+
+
+# ---------------- #
+#      Search      #
+# ---------------- #
+simple_jekyll_search:
+    # 是否支持全文搜索
+    fulltext: false
+    # 最多显示多少条搜索结果
+    limit: 10
+
 
 # Duoshuo settings
 duoshuo_username: Simple
