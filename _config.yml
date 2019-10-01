@@ -70,7 +70,7 @@ duoshuo_share: true                     # set to false if you want to use Commen
 #Sidebar settings
 sidebar: true                           # whether or not using Sidebar.
 sidebar-about-description: "退役ACMer，西安电子科技大学在读研究生。"
-sidebar-avatar: /img/menhe.jpg      # use absolute URL, seeing it's used in both `/` and `/about/`
+sidebar-avatar: /img/menhera.jpg      # use absolute URL, seeing it's used in both `/` and `/about/`
 
 
 
