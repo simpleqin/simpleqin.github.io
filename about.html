@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "About"
-description: "Hey, this is Jlcao."
+description: "Hey, this is simple."
 header-img: "img/about-bg.jpg"
 multilingual: true
 ---
@@ -14,24 +14,28 @@ multilingual: true
 
 <!-- Chinese Version -->
 <div class="zh post-container">
+    <!--
     <blockquote>
-        有内容的Java攻城狮
+        有内容的c++攻城狮
     </blockquote>
-        大家好，我是小码哥，目前在一家互联网医疗高新技术公司从事后端开发工作，参与过阿里健康、平安万家医疗等公司项目开发；这里将深入探讨相关技术，包括行业动态，架构设计，设计模式，框架使用，源码分析等；还有本人亲身感悟的面试经验以及开发文档资料，欢迎和大家交流分享！作为这个行业的其中一员，一定要耐得住寂寞，和你的电脑处理好关系，一起为自己的职业道路添砖加瓦吧！
+    -->
+        大家好，我是qry，目前在西安电子科技大学读研究生，主要研究物联网安全。本科时期主要精力在ACM上，大家想学习算法可以关注我的ACM博客。
 
 
     <p style="text-align:right;">
-        —— <a href="https://caojiele.com/about/">曹杰乐 － 「自我简介」 </a>
+        —— qry － 「自我简介」 
     </p>
 
 </div>
 
 <!-- English Version -->
 <div class="en post-container">
+    <!--
     <blockquote>
         Think of what you want to know what you need.
     </blockquote>
-        Hello everyone, I am a small yards, now in a Internet medical high-tech company engaged in the back-end development work, health, peace, health and other companies involved in ali project development;Here will explore related technologies, including the industry dynamics, architectural design, design patterns, frameworks use, source code analysis, etc.;And I personally feel interview experience and development of document information, welcome to communicate with everyone to share!As a member of the industry, must bear live lonesome, deal with your computer, to their own career path together!
+    -->
+        Hello！
 
     <p style="text-align:right;">
     -- caojiele
@@ -56,64 +60,22 @@ multilingual: true
 </script>
 
 
+<h2 id="工作经历">工作经历</h2>
+<ul>
+    <li> "2018.6 ~ 2018.09 腾讯wxg微信支付c++后台实习生 "</li>
+</ul>
 
-{% if site.duoshuo_username %}
-<!-- 多说评论框 start -->
-<div class="comment">
-    <div class="ds-thread"
-    {% if site.duoshuo_username == "jlcaoblog" %}
-        data-thread-id="1187623191091085319"
-    {% else %}
-        data-thread-key="{{site.duoshuo_username}}/about"
-    {% endif %}
+<br>
+<br>
 
-    data-title="{{page.title}}"
-    data-url="{{site.url}}/about/"></div>
-</div>
-<!-- 多说评论框 end -->
-
-<!-- Duoshuo hacking -->
-<input id="dsUser" type="hidden" value="{{site.duoshuo_username}}"  />
-
-<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
-<script type="text/javascript">
-    // dynamic User hacking by Hux
-    var _user = document.getElementById('dsUser').value;
-    // duoshuo comment query.
-    var duoshuoQuery = {short_name: _user };
-    (function() {
-        var ds = document.createElement('script');
-        ds.type = 'text/javascript';ds.async = true;
-        ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
-        ds.charset = 'UTF-8';
-        (document.getElementsByTagName('head')[0]
-         || document.getElementsByTagName('body')[0]).appendChild(ds);
-    })();
-</script>
-<!-- 多说公共JS代码 end -->
-{% endif %}
+<h2 id="奖项">奖项</h2>
+<ul>
+    <li>"2017 ACM-icpc亚洲区域赛西安站银奖  "</li>
+    <li>"2016 ACM-icpc亚洲区域赛青岛站银奖  "</li>
+    <li>"2016 CCPC杭州站银奖  "</li>
+    <li>"2017 大学生程序设计竞赛省赛金奖 "</li>
+</ul>
 
 
-{% if site.disqus_username %}
-<!-- disqus 评论框 start -->
-<div class="comment">
-    <div id="disqus_thread" class="disqus-thread">
 
-    </div>
-</div>
-<!-- disqus 评论框 end -->
 
-<!-- disqus 公共JS代码 start (一个网页只需插入一次) -->
-<script type="text/javascript">
-    /* * * CONFIGURATION VARIABLES * * */
-    var disqus_shortname = "{{site.disqus_username}}";
-    var disqus_identifier = "{{site.disqus_username}}/{{page.url}}";
-    var disqus_url = "{{site.url}}{{page.url}}";
-    (function() {
-        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-    })();
-</script>
-<!-- disqus 公共JS代码 end -->
-{% endif %}
