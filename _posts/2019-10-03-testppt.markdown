@@ -1,6 +1,6 @@
 ---
 
 layout:     keynote
-iframe:     "/ppt/test.pptx"
+iframe:     "simpleqin.github.io/ppt/test.pptx"
 
 ---
