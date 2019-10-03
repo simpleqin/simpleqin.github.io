@@ -14,4 +14,9 @@ tags:
 
 随便测试一下，23333
 
-[test.pptx](/ppt/test.pptx)
+
+---
+layout:     keynote
+iframe:     "/ppt/test.pptx"
+---
+
