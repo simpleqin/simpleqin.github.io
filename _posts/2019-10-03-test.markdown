@@ -1,5 +1,8 @@
 ---
 layout:     post
+layout:     keynote
+
+iframe:     "https://github.com/simpleqin/simpleqin.github.io/blob/master/ppt/test.pptx"
 title:      "test"
 date:       2019-10-03
 author:     "simple"
@@ -10,13 +13,10 @@ tags:
 ---
 
 
+
+
 ## test
 
 随便测试一下，23333
 
-
----
-layout:     keynote
-iframe:     "/ppt/test.pptx"
----
 
