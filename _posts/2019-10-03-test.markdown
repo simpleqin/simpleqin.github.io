@@ -1,8 +1,5 @@
 ---
 layout:     post
-layout:     keynote
-
-iframe:     "https://github.com/simpleqin/simpleqin.github.io/blob/master/ppt/test.pptx"
 title:      "test"
 date:       2019-10-03
 author:     "simple"
