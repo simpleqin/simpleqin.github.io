@@ -2,7 +2,7 @@
 layout:     post
 title:      "Welcome to Simple Blog"
 subtitle:   " \"Hello World, Hello Blog\""
-date:       2015-01-29 12:00:00
+date:       2019-10-01
 author:     "simple"
 header-img: "img/post-bg-2015.jpg"
 tags:
