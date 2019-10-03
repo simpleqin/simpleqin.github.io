@@ -16,4 +16,4 @@ tags:
 
 随便测试一下，23333
 
-[test.ppt](/ppt/test.pdf){target="_blank"}
+[test.ppt](/ppt/test.pdf){:target="_blank"} 
