@@ -18,4 +18,3 @@ tags:
 
 <a href="/ppt/test.pdf" target="_blank">test.ppt</a>
 
-[test.ppt](/ppt/test.pdf)
