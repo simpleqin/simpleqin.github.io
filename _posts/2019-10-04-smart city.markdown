@@ -2,7 +2,7 @@
 ---
 layout:     post
 title:      "智慧城市中的隐私—应用，技术，挑战和解决方案"
-subtitle:   " Privacy in the Smart City—Applications, Technologies, Challenges, and Solutions"
+subtitle:   "Privacy in the Smart City—Applications, Technologies, Challenges, and Solutions"
 date:       2019-10-04
 author:     "simple"
 header-img: "img/post-bg-2015.jpg"
