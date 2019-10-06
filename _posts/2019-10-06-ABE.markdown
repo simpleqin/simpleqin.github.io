@@ -15,6 +15,7 @@ tags:
 <br>
 <br>
 目录
+
 [toc]
 
 
@@ -27,24 +28,24 @@ tags:
 
 
 ## 预备知识
-1. 有限域 $z_p$
-    $z_p = {0,1,2,...,p-1}
-    所有运算的结果都是在这个集合内，即运算对p取余
+1. 有限域 $z_p$  
+    $z_p = {0,1,2,...,p-1}  
+    所有运算的结果都是在这个集合内，即运算对p取余  
     <br>
 
-2. 双线性配对
-    是一种在有限域上的一种运算，不用知道具体是什么一种运算（其实是我还没弄清楚），只需知道有下面这么一个公式：
-    $e(g^a,g^b) = e(g,g)^{ab}$ 
+2. 双线性配对  
+    是一种在有限域上的一种运算，不用知道具体是什么一种运算（其实是我还没弄清楚），只需知道有下面这么一个公式：  
+    $e(g^a,g^b) = e(g,g)^{ab}$   
     <br>
 
-3. 访问控制树
-    每一个非叶子节点代表一个门限。令$num_x$为x节点的孩子数量，$k_x$为x节点的门限。当$k_x$为1时代表OR（或）门，当$k_x$为$num_x$时为AND（与）门。每一个叶子节点对应一个属性，且门限为1。
-    如何构造一个访问控制树？
-    从根节点开始，随机生成一个多项式，多项式的最高次数为门限值减一，常数项f(0)为秘密值s；然后递归地进行同样的生成随机多项式的操作，孩子的多项式的常数项分别设为父节点多项式的f(i)的值，i为从左到右孩子节点的编号。
+3. 访问控制树  
+    每一个非叶子节点代表一个门限。令$num_x$为x节点的孩子数量，$k_x$为x节点的门限。当$k_x$为1时代表OR（或）门，当$k_x$为$num_x$时为AND（与）门。每一个叶子节点对应一个属性，且门限为1。  
+    如何构造一个访问控制树？  
+    从根节点开始，随机生成一个多项式，多项式的最高次数为门限值减一，常数项f(0)为秘密值s；然后递归地进行同样的生成随机多项式的操作，孩子的多项式的常数项分别设为父节点多项式的f(i)的值，i为从左到右孩子节点的编号。  
     <br>
 
-4. 拉格朗日插值法
-    给定n-1一个点，就可以重建出一个n次多项式。
+4. 拉格朗日插值法  
+    给定n-1一个点，就可以重建出一个n次多项式。  
     $$
     \Delta_{i, S}(x)=\prod_{j \in S, j\neq i} \frac{x-j}{i-j}
     $$
@@ -56,36 +57,35 @@ $$
 <br>
 
 ## 分类
-属性加密又可以细分为两类，一种是密文策略的属性加密，另一种为密钥策略的属性加密。
-1. 密文策略属性加密(CP-ABE)：访问策略包含在密文中
-2. 密钥策略属性加密(KP-ABE)：访问策略包含在密钥中
+属性加密又可以细分为两类，一种是密文策略的属性加密，另一种为密钥策略的属性加密。  
+1. 密文策略属性加密(CP-ABE)：访问策略包含在密文中  
+2. 密钥策略属性加密(KP-ABE)：访问策略包含在密钥中  
 
 
-MK为主密钥，PK为公钥，M为明文，T为访问控制树，S为属性集，CT为密文
+MK为主密钥，PK为公钥，M为明文，T为访问控制树，S为属性集，CT为密文  
 
-（详细过程可见下面ppt）
-CP-ABE: setup() ,Encrypt(PK,M,T) ,KeyGen(MK,S), Decryt(CT,SK)
-KP-ABE: setup() ,Encrypt(PK,M,S) ,KeyGen(MK,T), Decryt(CT,SK)
+（详细过程可见下面ppt）  
+CP-ABE: setup() ,Encrypt(PK,M,T) ,KeyGen(MK,S), Decryt(CT,SK)  
+KP-ABE: setup() ,Encrypt(PK,M,S) ,KeyGen(MK,T), Decryt(CT,SK)  
 
-通过以上CP-ABE和KP-ABE算法的整个流程，我们可以看到CP-ABE在加密的过程中就要生成访问控制策略，然后把访问控制策略放入密文中，而生成密钥的时候只需把属性集作为参数传入进行判断即可；KP-ABE恰恰相反，在加密过程中只需要把属性集作为标签带入即可，生成密钥的时候再生成访问控制策略。
+通过以上CP-ABE和KP-ABE算法的整个流程，我们可以看到CP-ABE在加密的过程中就要生成访问控制策略，然后把访问控制策略放入密文中，而生成密钥的时候只需把属性集作为参数传入进行判断即可；KP-ABE恰恰相反，在加密过程中只需要把属性集作为标签带入即可，生成密钥的时候再生成访问控制策略。  
 
 <br>
 
 
 ## 安全性证明
 
-（挑战者一般指的是被挑战者）
-本节以CP-ABE为例来说明ABE方案中的各种安全性定义。首先给出一般CP-ABE的安全模型。
-Setup：挑战者C 执行CP-ABE方案中的Setup(λ)算法，并将公钥PK 发送给敌手A。
-Phase 1：A将属性集S发送给C，并询问对应的私钥。C将对应的私钥返回给A。
+（挑战者一般指的是被挑战者）  
+本节以CP-ABE为例来说明ABE方案中的各种安全性定义。首先给出一般CP-ABE的安全模型。  
+Setup：挑战者C 执行CP-ABE方案中的Setup(λ)算法，并将公钥PK 发送给敌手A。  
+Phase 1：A将属性集S发送给C，并询问对应的私钥。C将对应的私钥返回给A。  
 Challenge：A 将两个长度相等的消息$M_0$,$M_1$和一个访问策略P发送给C。这里要求访问策略P不能被任何询问过的属性集S满足。C 选取随机值b ∈ {0,1}，
-计算Encrypt($M_b$, P, P K) 得到密文$CT^*$，并将$CT^*$返回给A。
-Phase 2：与Phase 1相同。但要求询问的属性集Si不能满足访问策略P。
-Output：A 输出关于b′的猜测结果b。
-A 赢得该游戏的优势定义为Pr[b = b′] −1/2。
+计算Encrypt($M_b$, P, P K) 得到密文$CT^*$，并将$CT^*$返回给A。  
+Phase 2：与Phase 1相同。但要求询问的属性集Si不能满足访问策略P。  
+Output：A 输出关于b′的猜测结果b。  
+A 赢得该游戏的优势定义为Pr[b = b′] −1/2。  
 
-若任何多项式时间敌手赢得上述游戏的优势都是可忽略的，则称CP-ABE方
-案是适应性安全（Adaptively Secure）的。
+若任何多项式时间敌手赢得上述游戏的优势都是可忽略的，则称CP-ABE方案是适应性安全（Adaptively Secure的。  
 
 
 
@@ -97,6 +97,6 @@ A 赢得该游戏的优势定义为Pr[b = b′] −1/2。
 
 ## paper
 
-<a href="/papers/Fuzzy Identity-Based Encryption.pdf" target="_blank">Fuzzy Identity-Based Encryption.pdf</a>
-<a href="/papers/CP-ABE.pdf" target="_blank">CP-ABE.pdf</a>
-<a href="/papers/KP-ABE.pdf" target="_blank">KP-ABE.pdf</a>
+<a href="/papers/Fuzzy Identity-Based Encryption.pdf" target="_blank">Fuzzy Identity-Based Encryption.pdf</a>  
+<a href="/papers/CP-ABE.pdf" target="_blank">CP-ABE.pdf</a>  
+<a href="/papers/KP-ABE.pdf" target="_blank">KP-ABE.pdf</a>  
