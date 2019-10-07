@@ -33,7 +33,7 @@ gems: [jekyll-paginate]
 markdown: kramdown
 kramdown:
   input: GFM                            # use Github Flavored Markdown !important
-sudo gem install kramdown
+
 
 
 # Disqus settings
