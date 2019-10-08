@@ -16,6 +16,8 @@ tags:
 <br>
 目录
 
+[]
+
 [简介](#简介)  
 [预备知识](#预备知识)  
 [分类](#分类)  
@@ -55,9 +57,9 @@ tags:
     \Delta_{i, S}(x)=\prod_{j \in S, j\neq i} \frac{x-j}{i-j}
     $$
 
-    $$
+    $
 f(x)=\frac{\left(x-x_{1}\right)\left(x-x_{2}\right)\left(x-x_{3}\right)}{\left(x_{0}-x_{1}\right)\left(x_{0}-x_{2}\right)\left(x_{0}-x_{3}\right)} y_{0}+\frac{\left(x-x_{0}\right)\left(x-x_{2}\right)\left(x-x_{3}\right)}{\left(x_{1}-x_{0}\right)\left(x_{1}-x_{2}\right)\left(x_{1}-x_{3}\right)} y_{1}+\frac{\left(x-x_{0}\right)\left(x-x_{1}\right)\left(x-x_{3}\right)}{\left(x_{2}-x_{1}\right)\left(x_{2}-x_{1}\right)\left(x_{2}-x_{3}\right)} y_{2}+\frac{\left(x-x_{0}\right)\left(x-x_{1}\right)\left(x-x_{2}\right)}{\left(x_{3}-x_{0}\right)\left(x_{3}-x_{1}\right)\left(x_{3}-x_{2}\right)} y_{3}
-$$
+$
 
 <br>
 
@@ -85,7 +87,7 @@ KP-ABE: setup() ,Encrypt(PK,M,S) ,KeyGen(MK,T), Decryt(CT,SK)
 Setup：挑战者C 执行CP-ABE方案中的Setup(λ)算法，并将公钥PK 发送给敌手A。  
 Phase 1：A将属性集S发送给C，并询问对应的私钥。C将对应的私钥返回给A。  
 Challenge：A 将两个长度相等的消息$M_0$,$M_1$和一个访问策略P发送给C。这里要求访问策略P不能被任何询问过的属性集S满足。C 选取随机值b ∈ {0,1}，
-计算Encrypt($M_b$, P, P K) 得到密文$CT^*$，并将$CT^*$返回给A。  
+计算Encrypt($M_b$, P, P K) 得到密文$ CT^* $，并将$ CT^* $返回给A。  
 Phase 2：与Phase 1相同。但要求询问的属性集Si不能满足访问策略P。  
 Output：A 输出关于b′的猜测结果b。  
 A 赢得该游戏的优势定义为Pr[b = b′] −1/2。  
