@@ -36,8 +36,6 @@ markdown: kramdown
 
 
 
-# Disqus settings
-#disqus_username: _your_disqus_short_name_
 
 
 # ---------------- #
@@ -50,13 +48,6 @@ simple_jekyll_search:
     limit: 10
 
 
-# Duoshuo settings
-duoshuo_username: Simple
-# Share component is depend on Comment so we can NOT use share only.
-duoshuo_share: true                     # set to false if you want to use Comment without Sharing
-
-
-
 
 # Analytics settings
 # Baidu Analytics
@@ -64,6 +55,17 @@ duoshuo_share: true                     # set to false if you want to use Commen
 # Google Analytics
 #ga_track_id: 'UA-49627206-1'            # Format: UA-xxxxxx-xx
 #ga_domain: simpleqin.github.io
+
+
+
+# gitalk settings
+gitalk:
+   enable: true
+   owner: simpleqin
+   repo: simpleqin.github.io
+   clientID: 24443d8c879178f3b027
+   clientSecret: 1a20974f30c8f58ba008402f3c40553afabac04e
+   admin: simpleqin
 
 
 
