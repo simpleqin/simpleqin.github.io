@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      "github的markdow各种问题（公式渲染、目录等）"
+title:      "github的markdown各种问题（公式渲染、目录等）"
 date:       2019-10-08
 author:     "simple"
 header-img: "img/post-bg-2015.jpg"
