@@ -66,7 +66,7 @@ gitalk:
    clientID: 24443d8c879178f3b027
    clientSecret: fff2b215110c397ab18b8c6d90f5f0f4def41194 #1a20974f30c8f58ba008402f3c40553afabac04e
    admin: simpleqin
-   proxy: https://netnr-proxy.cloudno.de/https://github.com/login/oauth/access_token
+   proxy: https://shielded-brushlands-08810.herokuapp.com/https://github.com/login/oauth/access_token
 
 
 #Sidebar settings
