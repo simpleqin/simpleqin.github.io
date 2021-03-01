@@ -10,6 +10,8 @@ var gitalk = new Gitalk({
     owner: '{{ site.gitalk.owner }}',
     admin: ['{{ site.gitalk.owner }}'], 
 	labels: ['Gitalk'],
+	proxy : '{{ site.gitalk.proxy }}',
+
 })
 gitalk.render('gitalk-container')
 </script> 
