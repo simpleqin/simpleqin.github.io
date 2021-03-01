@@ -64,7 +64,7 @@ gitalk:
    owner: simpleqin
    repo: simpleqin.github.io
    clientID: 24443d8c879178f3b027
-   clientSecret: 1a20974f30c8f58ba008402f3c40553afabac04e
+   clientSecret: fff2b215110c397ab18b8c6d90f5f0f4def41194 #1a20974f30c8f58ba008402f3c40553afabac04e
    admin: simpleqin
 
 
